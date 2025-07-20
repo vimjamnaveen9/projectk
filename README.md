@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 8byte - Full-Stack DevOps Infrastructure
 
 A comprehensive cloud-native application demonstrating enterprise-grade DevOps practices with AWS, Terraform, and GitHub Actions.
@@ -330,3 +331,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ---
 
 **Note**: This infrastructure is designed for demonstration and development purposes. For production deployments, ensure proper security reviews, compliance checks, and disaster recovery planning.
+=======
+# projectk
+>>>>>>> 20ca0f58b7607035707a20725a19e78a40cad1f3
