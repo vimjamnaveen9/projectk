@@ -1,0 +1,44 @@
+# Project Configuration
+project_name = "8byte-app"
+environment  = "dev"
+aws_region   = "us-west-2"
+
+# Network Configuration
+vpc_cidr               = "10.0.0.0/16"
+availability_zones     = ["us-west-2a", "us-west-2b"]
+public_subnet_cidrs    = ["10.0.1.0/24", "10.0.2.0/24"]
+private_subnet_cidrs   = ["10.0.11.0/24", "10.0.12.0/24"]
+db_subnet_cidrs        = ["10.0.21.0/24", "10.0.22.0/24"]
+
+# EC2 Configuration
+instance_type    = "t3.micro"
+min_size         = 2
+max_size         = 6
+desired_capacity = 2
+key_name         = ""  # Optional: Add your EC2 key pair name
+
+# Database Configuration
+db_instance_class        = "db.t3.micro"
+db_name                  = "appdb"
+db_username              = "dbadmin"
+db_allocated_storage     = 20
+db_max_allocated_storage = 100
+backup_retention_period  = 7
+backup_window           = "03:00-04:00"
+maintenance_window      = "sun:04:00-sun:05:00"
+
+# Security Configuration
+allowed_cidr_blocks = ["0.0.0.0/0"]  # Restrict this in production
+
+# High Availability & Protection
+enable_deletion_protection = false  # Set to true for production
+multi_az                  = false   # Set to true for production
+
+# Resource Tags
+tags = {
+  Project     = "8byte"
+  Environment = "dev"
+  Owner       = "DevOps Team"
+  ManagedBy   = "Terraform"
+  CostCenter  = "Engineering"
+}
